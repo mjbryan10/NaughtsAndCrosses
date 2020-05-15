@@ -1,15 +1,9 @@
 ﻿using System;
 
-namespace collections_demo
+namespace naughts_and_crosses
 {
     public class Game
     {
-        //private Square[][] _board =
-        //{
-        //    new Square[3],
-        //    new Square[3],
-        //    new Square[3]
-        //};
         private int _counter = 0;
         private Square[,] _board = new Square[3, 3];
         public void PlayGame()
@@ -73,7 +67,6 @@ namespace collections_demo
 
         private bool checkWinner(int row, int column, Player currentPlayer)
         {
-            //TODO
             int rowCounter = 0;
             int columnCounter = 0;
 
@@ -114,49 +107,6 @@ namespace collections_demo
             return false;
         }
 
-        //private bool checkWinner(int row, int column, Player currentPlayer)
-        //{
-        //    if (_counter < 6)
-        //        return false;
-
-        //    //Note: 0 indexed
-        //    switch (row)
-        //        //Checks rows if any wins
-        //    {
-        //        case 0 when _board[row + 1, column].Owner == currentPlayer && _board[row + 2, column].Owner == currentPlayer ||
-        //        column == 0 && _board[row + 1, column + 1].Owner == currentPlayer && _board[row + 2, column + 2].Owner == currentPlayer ||
-        //        column == 2 && _board[row + 1, column - 1].Owner == currentPlayer && _board[row + 2, column - 2].Owner == currentPlayer:
-        //            return true;
-        //        case 1 when
-        //            _board[row - 1, column].Owner == currentPlayer && _board[row + 1, column].Owner == currentPlayer ||
-        //            row == column && _board[row + 1, column + 1].Owner == currentPlayer && _board[row - 1, column - 1].Owner == currentPlayer ||
-        //            row == column && _board[row + 1, column - 1].Owner == currentPlayer && _board[row - 1, column + 1].Owner == currentPlayer:
-        //            return true;
-        //        case 2 when _board[row - 1, column].Owner == currentPlayer && _board[row - 2, column].Owner == currentPlayer ||
-        //        column == 0 && _board[row - 1, column + 1].Owner == currentPlayer && _board[row - 2, column + 2].Owner == currentPlayer ||
-        //        column == 2 && _board[row - 1, column - 1].Owner == currentPlayer && _board[row - 2, column - 2].Owner == currentPlayer:
-        //            return true;
-        //    }
-        //    switch (column)
-        //        //Checks colums for any wins
-        //    {
-        //        case 0 when _board[row, column + 1].Owner == currentPlayer && _board[row, column + 2].Owner == currentPlayer:
-        //            return true;
-        //        case 1 when _board[row, column - 1].Owner == currentPlayer && _board[row, column + 1].Owner == currentPlayer:
-        //            return true;
-        //        case 2 when _board[row, column - 1].Owner == currentPlayer && _board[row, column - 2].Owner == currentPlayer:
-        //            return true;
-        //    }
-        //    return false;
-        //}
-
-
-
-
-
-        public Game()
-        {
-        }
     }
 }
 

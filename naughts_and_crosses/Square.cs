@@ -1,5 +1,5 @@
 ﻿using System;
-namespace collections_demo
+namespace naughts_and_crosses
 {
     public enum Player { Noone = 0, Noughts, Crosses }
     public struct Square

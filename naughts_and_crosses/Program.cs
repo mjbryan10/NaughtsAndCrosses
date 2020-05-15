@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace collections_demo
+namespace naughts_and_crosses
 {
     class Program
     {
