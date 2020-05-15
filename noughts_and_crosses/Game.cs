@@ -1,10 +1,9 @@
 ﻿using System;
 
-namespace naughts_and_crosses
+namespace noughts_and_crosses
 {
     public class Game
     {
-        private int _counter = 0;
         private Square[,] _board = new Square[3, 3];
         public void PlayGame()
         {
@@ -50,10 +49,10 @@ namespace naughts_and_crosses
                 Console.WriteLine("Square is already occupied");
                 return false;
             }
+
             var playerSquare = new Square(player);
             _board[row - 1, column - 1] = playerSquare;
-            _counter++;
-            Console.WriteLine($"Counter is at: {_counter}");
+
             if (checkWinner(row - 1, column - 1, playerSquare.Owner))
             {
                 DisplayBoard();
